@@ -1,0 +1,1139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    animation: name 2s linear 3s infinite normal;
+}
+
+/* IMAGE */
+
+.img1 {
+    width: 100%;
+    max-width: 100%;
+    height: 105vh;
+    object-fit: cover;
+    display: block;
+}
+
+/* NAV */
+
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-family: "Dancing Script", cursive;
+    font-size: 36px;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-link {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0 30px 0 auto;
+}
+
+.nav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: rgb(241, 185, 71);
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    margin:0px 0px 0px 200px ;
+    gap: 15px;
+}
+
+.nav-icon button {
+    background-color: rgb(243, 199, 79);
+    color: aliceblue;
+    border-radius: 50px;
+    border: 0;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+/* ANIMATION */
+
+@keyframes myanimation {
+    from {
+        background-color: aqua;
+    }
+
+    to {
+        background-color: brown;
+    }
+}
+
+/* HEADING */
+
+.text {
+    position: absolute;
+    top: 29vh;
+    left: 3%;
+    width: 45%;
+    font-size: 1.2rem;
+}
+
+.text h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 60px;
+    line-height: 80px;
+    width: 100%;
+    margin: 2px;
+    color: aliceblue;
+}
+
+.text p {
+    font-size: 20px;
+    line-height: 1.0;
+    width: 100%;
+    color: aliceblue;
+}
+
+/* OFFERS */
+
+.box {
+    display: flex;
+    padding: 0;
+    margin: 50px auto;
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.type {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 25px;
+    background-color: rgb(65, 68, 68);
+    gap: 25px;
+    flex: 1;
+    min-width: 0;
+}
+
+.type img {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid yellow;
+    transition: 0.4s;
+    max-width: 100%;
+}
+
+.type img:hover {
+    transform: translateY(-9px);
+}
+
+.offer {
+    width: 300px;
+    max-width: 100%;
+}
+
+.offer h4 {
+    font-size: 30px;
+    padding: 10px 10px;
+}
+
+.offer h3 {
+    font-size: 20px;
+    padding: 10px 10px;
+}
+
+.offer h3 span {
+    font-size: 30px;
+}
+
+.order-butten {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(240, 182, 67);
+    color: white;
+}
+
+.order-butten:hover {
+    background-color: rgb(239, 171, 44);
+}
+
+/* MENU */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu h2 {
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    margin: 50px 0;
+    font-size: 40px;
+}
+
+.menu h4 {
+    font-size: 30px;
+    font-weight: 10;
+}
+
+.menu h4:hover {
+    color: rgb(223, 141, 35);
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 30px 80px;
+    max-width: 100%;
+}
+
+.items {
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 400px;
+    width: auto;
+    min-width: 0;
+    background-color: rgb(32, 32, 31);
+    color: aliceblue;
+}
+
+.items img {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: aliceblue;
+    border-radius: 0 0 0 50px;
+    transition: 0.3s;
+}
+
+.items img:hover,
+.items img:focus {
+    transform: scale(1.1);
+}
+
+.items h3 {
+    text-align: left;
+    padding: 20px;
+}
+
+.items p {
+    text-align: left;
+    padding: 20px;
+}
+
+.food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.read-more {
+    text-align: center;
+    margin: 20px;
+}
+
+/* ABOUT */
+
+.about-us {
+    min-height: 700px;
+    display: flex;
+    background-color: rgb(37, 37, 41);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.about-us img {
+    width: 50%;
+    height: 600px;
+    margin-top: 40px;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.about {
+    width: 45%;
+    color: white;
+    margin: 59px 30px;
+    min-width: 0;
+}
+
+.about h3 {
+    margin-bottom: 20px;
+    font-family: "Dancing Script", cursive;
+    font-size: 50px;
+}
+
+.about p {
+    font-size: 20px;
+}
+
+.about button {
+    background-color: rgb(237, 172, 67);
+    color: beige;
+    font-size: large;
+    border: 0;
+    padding: 20px 60px;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+.about button:hover {
+    background-color: rgb(255, 187, 0);
+}
+
+/* BOOK */
+
+.book {
+    display: flex;
+    gap: 40px;
+    padding: 80px;
+    
+    
+}
+
+/* .book > * {
+    min-width: 0;
+    max-width: 100%;
+} */
+
+.book h3 {
+    font-family: "Dancing Script", cursive;
+    position: absolute;
+    font-size: 40px;
+    margin-left: 60px;
+}
+
+.form {
+    margin: 50px 0 50px 50px;
+   
+}
+
+.form input {
+    width: 500px;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.form button {
+    border: 0;
+    padding: 15px 80px;
+    border-radius: 30px;
+    background-color: rgb(249, 211, 41);
+}
+
+iframe {
+    width:500px;
+    height: 400px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 60px;
+}
+
+/* CUSTOMER */
+
+.customer {
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.customer-say {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    max-width: 1200px;
+    height: 400px;
+    margin: 30px auto 10px;
+}
+
+.what-say {
+    color: aliceblue;
+    font-family: "Raleway", sans-serif;
+    min-width: 0;
+}
+
+.what-say p {
+    background-color: rgb(65, 57, 57);
+    margin: 10px;
+    height: 150px;
+    padding: 40px;
+    overflow-wrap: break-word;
+}
+
+.what-say img {
+    border-radius: 50%;
+    height: 100px;
+    max-width: 100%;
+    border: 6px solid gold;
+}
+
+.what-say img:hover {
+    transform: translate(10px);
+}
+
+/* FOOTER */
+
+footer {
+    min-height: 450px;
+    background-color: rgb(22, 20, 20);
+    color: blanchedalmond;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 60px;
+    padding: 10px;
+    text-decoration: none;
+    min-width: 0;
+}
+
+.social-link {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.footer-box {
+    margin: 60px 40px 40px 60px;
+    min-width: 0;
+}
+
+.footer-box a {
+    color: aliceblue;
+    padding: 10px 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.footer-box h3 {
+    font-family: "Dancing Script", cursive;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+}
+
+.cart {
+    color: aliceblue;
+    background-color: gold;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* =========================================
+   RESPONSIVE CSS
+   ========================================= */
+
+/* ---------- TABLET / SMALL LAPTOP ---------- */
+
+@media (max-width: 1024px) {
+
+    .nav {
+        padding: 0 25px;
+    }
+
+    .nav-link {
+        gap: 25px;
+        margin: 0 30px 0 auto;
+    }
+
+    .text {
+        top: 25vh;
+        left: 7%;
+        width: 55%;
+    }
+
+    .text h1 {
+        font-size: 40px;
+        line-height: 55px;
+        width: auto;
+    }
+
+    .box {
+        margin: 40px auto;
+        width: 90%;
+        gap: 20px;
+    }
+
+    .type {
+        padding: 15px;
+        gap: 15px;
+        flex: 1;
+    }
+
+    .type img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .offer {
+        width: auto;
+    }
+
+    .offer h4 {
+        font-size: 24px;
+    }
+
+    .offer h3 {
+        font-size: 17px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 40px;
+    }
+
+    .about-us {
+        min-height: auto;
+        padding: 50px 30px;
+    }
+
+    .about-us img {
+        width: 50%;
+        height: 500px;
+    }
+
+    .about {
+        width: 50%;
+        margin: 30px;
+    }
+
+    .book {
+        padding: 50px 30px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 768px) {
+
+    /* NAV */
+
+    .nav {
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .nav-link {
+        gap: 15px;
+        margin: 0 15px 0 auto;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .nav-icon {
+        gap: 10px;
+    }
+
+    .nav-icon button {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    /* HERO */
+
+    .img1 {
+        height: 80vh;
+    }
+
+    .text {
+        top: 25vh;
+        left: 7%;
+        width: 80%;
+    }
+
+    .text h1 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    .text p {
+        font-size: 16px;
+        width: auto;
+    }
+
+    /* OFFERS */
+
+    .box {
+        flex-direction: column;
+        margin: 40px 30px;
+        width: auto;
+        gap: 20px;
+    }
+
+    .type {
+        width: 100%;
+    }
+
+    .type img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .offer {
+        width: 100%;
+    }
+
+    /* MENU */
+
+    .menu {
+        gap: 20px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px 30px;
+    }
+
+    .items {
+        min-height: 380px;
+    }
+
+    /* ABOUT */
+
+    .about-us {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 30px;
+    }
+
+    .about-us img {
+        width: 80%;
+        height: 400px;
+        margin: 0;
+    }
+
+    .about {
+        width: 90%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .about h3 {
+        font-size: 42px;
+    }
+
+    .about p {
+        font-size: 17px;
+    }
+
+    /* BOOKING */
+
+    .book {
+        flex-direction: column;
+        padding: 50px 30px;
+    }
+
+    .book h3 {
+        position: static;
+        margin: 0;
+        text-align: center;
+    }
+
+    .form {
+        margin: 30px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form input {
+        width: 90%;
+        padding: 15px;
+        margin: 8px;
+    }
+
+    .form button {
+        padding: 15px 50px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 350px;
+        margin-top: 10px;
+    }
+
+    /* CUSTOMER */
+
+    .customer {
+        font-size: 35px;
+    }
+
+    .customer-say {
+        grid-template-columns: 1fr;
+        width: 90%;
+        height: auto;
+        margin: 30px auto;
+    }
+
+    .what-say {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-box {
+        margin: 20px;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* NAV */
+
+    .nav {
+        height: auto;
+        min-height: 70px;
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-link {
+        width: 100%;
+        order: 3;
+        justify-content: center;
+        gap: 18px;
+        margin: 15px 0 0;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .nav-icon {
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .nav-icon button {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    /* HERO */
+
+    .img1 {
+        height: 75vh;
+        min-height: 500px;
+    }
+
+    .text {
+        top: 25vh;
+        left: 7%;
+        width: 86%;
+    }
+
+    .text h1 {
+        width: 100%;
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .text p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* OFFERS */
+
+    .box {
+        flex-direction: column;
+        margin: 30px 15px;
+        width: auto;
+        gap: 15px;
+    }
+
+    .type {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .type img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .offer {
+        width: 100%;
+    }
+
+    .offer h4 {
+        font-size: 24px;
+    }
+
+    .offer h3 {
+        font-size: 17px;
+    }
+
+    .offer h3 span {
+        font-size: 25px;
+    }
+
+    .order-butten {
+        padding: 10px 35px;
+    }
+
+    /* MENU */
+
+    .menu {
+        display: block;
+    }
+
+    .menu h2 {
+        font-size: 32px;
+        margin: 30px 0;
+    }
+
+    .menu h4 {
+        font-size: 23px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .items {
+        min-height: auto;
+    }
+
+    .items img {
+        height: 200px;
+    }
+
+    .items h3,
+    .items p {
+        padding: 15px;
+    }
+
+    /* ABOUT */
+
+    .about-us {
+        padding: 30px 15px;
+    }
+
+    .about-us img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .about {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .about h3 {
+        font-size: 38px;
+    }
+
+    .about p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .about button {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+
+    /* BOOKING */
+
+    .book {
+        padding: 40px 15px;
+        gap: 20px;
+    }
+
+    .book h3 {
+        font-size: 32px;
+    }
+
+    .form {
+        margin: 20px 0;
+    }
+
+    .form input {
+        width: 100%;
+        padding: 15px;
+        margin: 7px 0;
+    }
+
+    .form button {
+        width: 80%;
+        padding: 14px;
+        margin: 15px auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* CUSTOMER */
+
+    .customer {
+        font-size: 32px;
+        padding: 0 15px;
+    }
+
+    .customer-say {
+        display: block;
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .what-say {
+        height: auto;
+        margin: 15px 0;
+        padding: 25px 15px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        height: auto;
+        padding: 30px 15px;
+        font-size: 16px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .footer-box {
+        margin: 15px 5px;
+    }
+
+    .footer-box h3 {
+        font-size: 25px;
+    }
+
+    .footer-bottom {
+        margin: 20px 0;
+    }
+}
+
+
+/* ---------- VERY SMALL MOBILE ---------- */
+
+@media (max-width: 360px) {
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-link {
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .nav-icon button {
+        padding: 6px 9px;
+        font-size: 11px;
+    }
+
+    .text h1 {
+        font-size: 27px;
+        line-height: 36px;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+
+    .type img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .offer h4 {
+        font-size: 21px;
+    }
+
+    .offer h3 {
+        font-size: 15px;
+    }
+
+    .food-grid {
+        padding: 15px 10px;
+    }
+
+    .about h3 {
+        font-size: 32px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+
+    .book h3 {
+        font-size: 28px;
+    }
+
+    .customer {
+        font-size: 28px;
+    }
+}
+
+
+/* BODY ANIMATION */
+
+@keyframes name {
+    0% {
+        background-color: rgb(187, 245, 245);
+    }
+
+    20% {
+        background-color: rgba(69, 236, 181, 0.623);
+    }
+
+    50% {
+        background-color: rgb(180, 241, 180);
+    }
+
+    100% {
+        background-color: rgba(195, 221, 134, 0.63);
+    }
+}
+
+/* FINAL OVERFLOW FIX */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+iframe {
+    max-width: 100%;
+}
+
+.book {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* .book > * {
+    min-width: 0;
+    max-width: 100%;
+} */
+
+.box {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.type {
+    min-width: 0;
+}
+
+.customer-say {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.what-say {
+    min-width: 0;
+}
+
+.what-say p {
+    width: calc(100% - 20px);
+}
