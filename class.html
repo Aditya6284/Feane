@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feane - Fast Food Restaurant</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            color: white;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url("hero-bg.jpg") center/cover no-repeat;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Dancing Script", cursive;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #ffbe33;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-icons a {
+            color: white;
+            transition: 0.3s;
+        }
+
+        .nav-icons a:hover {
+            color: #ffbe33;
+        }
+
+        .order-btn {
+            background: #ffbe33;
+            color: white !important;
+            padding: 10px 22px;
+            border-radius: 25px;
+        }
+
+        .order-btn:hover {
+            background: #e6a500;
+        }
+
+
+        /* =========================
+           HERO CONTENT
+        ========================= */
+
+        .hero-content {
+            padding-top: 150px;
+            width: 550px;
+        }
+
+        .hero-content h1 {
+            font-family: "Dancing Script", cursive;
+            font-size: 65px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #eee;
+        }
+
+        .main-btn {
+            display: inline-block;
+            background: #ffbe33;
+            color: white;
+            padding: 13px 30px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .main-btn:hover {
+            background: #e6a500;
+        }
+
+
+        /* =========================
+           OFFERS
+        ========================= */
+
+        .offers {
+            padding: 70px 0 30px;
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .offer-card {
+            background: #222831;
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            color: white;
+        }
+
+        .offer-img {
+            width: 170px;
+            height: 170px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #ffbe33;
+        }
+
+        .offer-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .offer-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .offer-content h3 {
+            font-family: "Dancing Script", cursive;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .offer-content h4 {
+            font-family: "Dancing Script", cursive;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .offer-content span {
+            font-size: 40px;
+        }
+
+        .offer-btn {
+            display: inline-block;
+            background: #ffbe33;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-family: "Dancing Script", cursive;
+            font-size: 45px;
+        }
+
+
+        /* =========================
+           MENU FILTER
+        ========================= */
+
+        .menu-section {
+            padding: 60px 0;
+        }
+
+        .menu-filter {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .menu-filter li {
+            cursor: pointer;
+            padding: 8px 20px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .menu-filter li:hover,
+        .menu-filter .active {
+            background: #222831;
+            color: white;
+        }
+
+
+        /* =========================
+           FOOD CARDS
+        ========================= */
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .food-card {
+            background: #222831;
+            color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .food-img {
+            height: 220px;
+            background: #f1f2f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            border-bottom-left-radius: 45px;
+        }
+
+        .food-img img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            transition: 0.3s;
+        }
+
+        .food-card:hover .food-img img {
+            transform: scale(1.08);
+        }
+
+        .food-info {
+            padding: 22px;
+        }
+
+        .food-info h3 {
+            font-family: "Dancing Script", cursive;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .food-info p {
+            color: #ddd;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .food-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price {
+            font-size: 18px;
+        }
+
+        .cart {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #ffbe33;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .view-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #222831;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-img img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+        }
+
+        .about-text h2 {
+            font-family: "Dancing Script", cursive;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            line-height: 1.8;
+            color: #eee;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           BOOK TABLE
+        ========================= */
+
+        .booking {
+            padding: 80px 0;
+        }
+
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .booking h2 {
+            font-family: "Dancing Script", cursive;
+            font-size: 45px;
+            margin-bottom: 30px;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .booking-form input,
+        .booking-form select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .booking-form input:focus,
+        .booking-form select:focus {
+            border-color: #ffbe33;
+        }
+
+        .booking-form button {
+            width: 150px;
+            border: none;
+            padding: 13px 20px;
+            background: #ffbe33;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           TESTIMONIALS
+        ========================= */
+
+        .testimonials {
+            padding: 70px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: #222831;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .testimonial p {
+            line-height: 1.7;
+            color: #eee;
+            margin-bottom: 20px;
+        }
+
+        .customer {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .customer img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffbe33;
+        }
+
+        .customer h4 {
+            font-family: "Dancing Script", cursive;
+            font-size: 24px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #222831;
+            color: white;
+            padding: 70px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            text-align: center;
+        }
+
+        .footer-box h3 {
+            font-family: "Dancing Script", cursive;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-box p {
+            color: #ddd;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a:hover {
+            color: #ffbe33;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            width: 38px;
+            height: 38px;
+            background: white;
+            color: #222831;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            background: #ffbe33;
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            margin-top: 50px;
+            padding-top: 25px;
+            text-align: center;
+            color: #ccc;
+            line-height: 2;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-icons .order-btn {
+                display: none;
+            }
+
+            .hero-content {
+                width: 90%;
+            }
+
+            .hero-content h1 {
+                font-size: 50px;
+            }
+
+            .offer-grid,
+            .about-container,
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+
+            .food-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 20px 0;
+                gap: 15px;
+            }
+
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero {
+                min-height: 850px;
+            }
+
+            .hero-content {
+                padding-top: 100px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .offer-grid,
+            .food-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .offer-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu-filter {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .about-text h2,
+            .booking h2,
+            .section-title h2 {
+                font-size: 38px;
+            }
+
+            .booking {
+                padding: 50px 0;
+            }
+
+            .map iframe {
+                height: 300px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                Feane
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#booking">Book Table</a></li>
+            </ul>
+
+            <div class="nav-icons">
+
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <a href="#" class="order-btn">
+                    Order Online
+                </a>
+
+            </div>
+
+        </nav>
+         <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <h1>
+                Fast Food Restaurant
+            </h1>
+
+            <p>
+                Doloremque, itaque aperiam facilis rerum, commodi,
+                temporibus sapiente ad mollitia laborum quam quisquam
+                esse error unde. Tempora ex doloremque, labore, sunt
+                repellat dolore, iste magni quos nihil ducimus libero ipsam.
+            </p>
+    </div>
+    <div class="carousel-item">
+          <h1>
+                Fast Food Restaurant
+            </h1>
+
+            <p>
+                Doloremque, itaque aperiam facilis rerum, commodi,
+                temporibus sapiente ad mollitia laborum quam quisquam
+                esse error unde. Tempora ex doloremque, labore, sunt
+                repellat dolore, iste magni quos nihil ducimus libero ipsam.
+            </p>
+    </div>
+    <div class="carousel-item">
+          <h1>
+                Fast Food Restaurant
+            </h1>
+
+            <p>
+                Doloremque, itaque aperiam facilis rerum, commodi,
+                temporibus sapiente ad mollitia laborum quam quisquam
+                esse error unde. Tempora ex doloremque, labore, sunt
+                repellat dolore, iste magni quos nihil ducimus libero ipsam.
+            </p>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     OFFERS
+========================= -->
+
+<section class="offers">
+
+    <div class="container">
+
+        <div class="offer-grid">
+
+            <div class="offer-card">
+
+                <div class="offer-img">
+                    <img src="images/o1.jpg" alt="Tasty Thursday">
+                </div>
+
+                <div class="offer-content">
+
+                    <h3>Tasty Thursdays</h3>
+
+                    <h4>
+                        <span>20%</span> Off
+                    </h4>
+
+                    <a href="#menu" class="offer-btn">
+                        Order Now 🛒
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-img">
+                    <img src="images/o2.jpg" alt="Pizza Days">
+                </div>
+
+                <div class="offer-content">
+
+                    <h3>Pizza Days</h3>
+
+                    <h4>
+                        <span>15%</span> Off
+                    </h4>
+
+                    <a href="#menu" class="offer-btn">
+                        Order Now 🛒
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<section class="menu-section" id="menu">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Menu</h2>
+        </div>
+
+
+        <ul class="menu-filter">
+
+            <li class="active">All</li>
+            <li>Burger</li>
+            <li>Pizza</li>
+            <li>Pasta</li>
+            <li>Fries</li>
+
+        </ul>
+
+
+        <div class="food-grid">
+
+
+            <!-- FOOD 1 -->
+
+            <div class="food-card">
+
+                <div class="food-img">
+                    <img src="images/f1.png" alt="Delicious Pizza">
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Delicious Pizza</h3>
+
+                    <p>
+                        Veniam debitis quaerat officiis quasi cupiditate
+                        quo, quisquam velit, magnam voluptatem repellendus
+                        sed eaque.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">$20</span>
+
+                        <a href="#" class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD 2 -->
+
+            <div class="food-card">
+
+                <div class="food-img">
+                    <img src="images/f2.png" alt="Delicious Burger">
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Delicious Burger</h3>
+
+                    <p>
+                        Fresh ingredients combined with delicious flavors
+                        to create the perfect burger for you.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">$15</span>
+
+                        <a href="#" class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD 3 -->
+
+            <div class="food-card">
+
+                <div class="food-img">
+                    <img src="images/f3.png" alt="Cheese Pizza">
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Cheese Pizza</h3>
+
+                    <p>
+                        Delicious crispy pizza topped with cheese and
+                        fresh ingredients.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">$17</span>
+
+                        <a href="#" class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD 4 -->
+
+            <div class="food-card">
+
+                <div class="food-img">
+                    <img src="images/f4.png" alt="Delicious Pasta">
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Delicious Pasta</h3>
+
+                    <p>
+                        Creamy and flavorful pasta prepared with fresh
+                        ingredients and special sauce.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">$18</span>
+
+                        <a href="#" class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD 5 -->
+
+            <div class="food-card">
+
+                <div class="food-img">
+                    <img src="images/f5.png" alt="French Fries">
+                </div>
+
+                <div class="food-info">
+
+                    <h3>French Fries</h3>
+
+                    <p>
+                        Golden crispy french fries served hot and fresh
+                        with your favorite meal.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">$10</span>
+
+                        <a href="#" class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD 6 -->
+
+            <div class="food-card">
+
+                <div class="food-img">
+                    <img src="images/f6.png" alt="Special Pizza">
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Special Pizza</h3>
+
+                    <p>
+                        A delicious pizza made with premium toppings
+                        and a crispy golden crust.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">$15</span>
+
+                        <a href="#" class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD 7 -->
+
+            <div class="food-card">
+
+                <div class="food-img">
+                    <img src="images/f7.png" alt="Tasty Burger">
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Tasty Burger</h3>
+
+                    <p>
+                        Juicy burger with fresh vegetables and delicious
+                        homemade sauce.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">$12</span>
+
+                        <a href="#" class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD 8 -->
+
+            <div class="food-card">
+
+                <div class="food-img">
+                    <img src="images/f8.png" alt="Classic Burger">
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Classic Burger</h3>
+
+                    <p>
+                        A classic juicy burger prepared with fresh
+                        ingredients and a soft bun.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">$14</span>
+
+                        <a href="#" class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD 9 -->
+
+            <div class="food-card">
+
+                <div class="food-img">
+                    <img src="images/f9.png" alt="Creamy Pasta">
+                </div>
+
+                <div class="food-info">
+
+                    <h3>Creamy Pasta</h3>
+
+                    <p>
+                        Rich creamy pasta prepared with fresh herbs
+                        and delicious sauce.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">$10</span>
+
+                        <a href="#" class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="view-more">
+            <a href="#" class="main-btn">
+                View More
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container about-container">
+
+        <div class="about-img">
+            <img src="images/about-img.png" alt="About Feane">
+        </div>
+
+        <div class="about-text">
+
+            <h2>
+                We Are Feane
+            </h2>
+
+            <p>
+                There are many variations of passages of Lorem Ipsum
+                available, but the majority have suffered alteration in
+                some form, by injected humour, or randomised words which
+                don't look even slightly believable.
+
+                If you are going to use a passage of Lorem Ipsum, you
+                need to be sure there isn't anything embarrassing hidden
+                in the middle of text.
+            </p>
+
+            <a href="#" class="main-btn">
+                Read More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BOOK TABLE
+========================= -->
+
+<section class="booking" id="booking">
+
+    <div class="container booking-container">
+
+        <div>
+
+            <h2>
+                Book A Table
+            </h2>
+
+            <form class="booking-form">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <select required>
+
+                    <option value="">
+                        How many persons?
+                    </option>
+
+                    <option>2 Persons</option>
+                    <option>3 Persons</option>
+                    <option>4 Persons</option>
+                    <option>5 Persons</option>
+
+                </select>
+
+                <input
+                    type="date"
+                    required
+                >
+
+                <button type="submit">
+                    Book Now
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="map">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d71548.53163774633!2d76.84350650872207!3d30.695097757911626"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TESTIMONIALS
+========================= -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>
+                What Says Our Customers
+            </h2>
+        </div>
+
+
+        <div class="testimonial-grid">
+
+
+            <div class="testimonial">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+
+                <div class="customer">
+
+                    <img
+                        src="images/client1.jpg"
+                        alt="Moana Michell"
+                    >
+
+                    <div>
+                        <h4>Moana Michell</h4>
+                        <small>Happy Customer</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+
+                <div class="customer">
+
+                    <img
+                        src="images/client2.jpg"
+                        alt="Mike Hamell"
+                    >
+
+                    <div>
+                        <h4>Mike Hamell</h4>
+                        <small>Happy Customer</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-box">
+
+                <h3>Contact Us</h3>
+
+                <div class="footer-links">
+
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Location
+                    </a>
+
+                    <a href="tel:+011234567890">
+                        <i class="fa-solid fa-phone"></i>
+                        Call +01 1234567890
+                    </a>
+
+                    <a href="mailto:demo@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        demo@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEANE -->
+
+            <div class="footer-box">
+
+                <h3>Feane</h3>
+
+                <p>
+                    Necessary, making this the first true generator
+                    on the Internet. It uses a dictionary of over
+                    200 Latin words, combined with.
+                </p>
+
+                <div class="social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPENING HOURS -->
+
+            <div class="footer-box">
+
+                <h3>Opening Hours</h3>
+
+                <p>
+                    Everyday
+                </p>
+
+                <p>
+                    10.00 AM - 10.00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 All Rights Reserved By Free Html Templates
+            </p>
+
+            <p>
+                Distributed By ThemeWagon
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
+
+</body>
+</html>
